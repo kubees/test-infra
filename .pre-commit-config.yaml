@@ -1,0 +1,24 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.74.1
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_docs
+      - id: terraform_tfsec
+        args:
+          - >
+            --args=--minimum-severity medium
+            --exclude-downloaded-modules
+  - repo: local
+    hooks:
+      - id: commit-message-with-issue
+        name: Check for commit message
+        entry: '((feat|fix|docs|style|refactor|perf|test|chore) #\d+: .*)|(^Merge .*)'
+        args: [--negate]
+        language: pygrep
+        stages: [commit-msg]
