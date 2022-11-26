@@ -1,0 +1,6 @@
+[submodule "helm-charts/redis-helm-chart"]
+	path = helm-charts/redis-helm-chart
+	url = https://github.com/kubees/redis-helm-chart
+[submodule "databases/redis-helm-chart"]
+	path = databases/redis-helm-chart
+	url = https://github.com/kubees/redis-helm-chart
