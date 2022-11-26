@@ -7,3 +7,11 @@ provider "helm" {
 provider "kubernetes" {
   config_path = "~/.kube/config"
 }
+
+terraform {
+  required_version = "~> 1.3.0"
+  required_providers {
+    helm       = {}
+    kubernetes = {}
+  }
+}
