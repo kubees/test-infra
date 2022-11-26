@@ -1,5 +1,6 @@
 formatter: markdown
 
+header-from: docs/header.md
 sections:
   show: all
 
