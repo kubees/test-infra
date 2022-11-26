@@ -14,3 +14,10 @@ module "microservices" {
   ]
 }
 
+module "frontend" {
+  source = "./frontend"
+  depends_on = [
+    module.microservices
+  ]
+}
+
