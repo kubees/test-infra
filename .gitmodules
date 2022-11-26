@@ -7,3 +7,6 @@
 [submodule "microservices/videos-helm-chart"]
 	path = microservices/videos-helm-chart
 	url = https://github.com/kubees/videos-helm-chart
+[submodule "frontend/webapp-helm-chart"]
+	path = frontend/webapp-helm-chart
+	url = https://github.com/kubees/webapp-helm-chart
