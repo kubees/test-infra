@@ -9,4 +9,8 @@ resource "helm_release" "videos_microservice_release" {
   create_namespace  = true
   dependency_update = true
   cleanup_on_fail   = true
+  set {
+    name  = "deployment.container.digest"
+    value = var.frontend_image_digest
+  }
 }
