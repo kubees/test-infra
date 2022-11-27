@@ -14,6 +14,10 @@ resource "helm_release" "videos_microservice_release" {
     name  = "microservices-umbrella-chart.deployment.container.digest"
     value = var.videos_microservice_image_digest
   }
+  set {
+    name  = "microservices-umbrella-chart.monitoring.enabled"
+    value = false
+  }
 }
 
 resource "kubernetes_secret" "videos_redis_secret" {
@@ -45,6 +49,10 @@ resource "helm_release" "playlist_microservice_release" {
   set {
     name  = "microservices-umbrella-chart.deployment.container.digest"
     value = var.playlist_microservice_image_digest
+  }
+  set {
+    name  = "microservices-umbrella-chart.monitoring.enabled"
+    value = false
   }
 }
 
