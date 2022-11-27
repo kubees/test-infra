@@ -17,7 +17,8 @@ module "microservices" {
 }
 
 module "frontend" {
-  source = "./frontend"
+  source                = "./frontend"
+  frontend_image_digest = var.frontend_image_digest
   depends_on = [
     module.microservices
   ]

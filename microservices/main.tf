@@ -12,7 +12,7 @@ resource "helm_release" "videos_microservice_release" {
 
   set {
     name  = "microservices-umbrella-chart.deployment.container.digest"
-    value = "sha256:${var.videos_microservice_image_digest}"
+    value = var.videos_microservice_image_digest
   }
 }
 
@@ -41,7 +41,7 @@ resource "helm_release" "playlist_microservice_release" {
 
   set {
     name  = "microservices-umbrella-chart.deployment.container.digest"
-    value = "sha256:${var.playlist_microservice_image_digest}"
+    value = var.playlist_microservice_image_digest
   }
 }
 
