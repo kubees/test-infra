@@ -11,6 +11,10 @@ resource "helm_release" "redis_release" {
   depends_on = [
     kubernetes_secret.redis_secret
   ]
+  set {
+    name  = "redis.metrics.enabled"
+    value = false
+  }
 }
 
 resource "kubernetes_namespace" "databases" {
