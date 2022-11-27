@@ -28,6 +28,9 @@ resource "kubernetes_secret" "videos_redis_secret" {
   }
 
   type = "kubernetes.io/opaque"
+  depends_on = [
+    kubernetes_namespace.microservices
+  ]
 }
 
 resource "helm_release" "playlist_microservice_release" {
@@ -57,4 +60,17 @@ resource "kubernetes_secret" "playlist_redis_secret" {
   }
 
   type = "kubernetes.io/opaque"
+
+  depends_on = [
+    kubernetes_namespace.microservices
+  ]
+}
+
+resource "kubernetes_namespace" "microservices" {
+  metadata {
+    annotations = {
+      name = local.namespace
+    }
+    name = local.namespace
+  }
 }

@@ -13,6 +13,15 @@ resource "helm_release" "redis_release" {
   ]
 }
 
+resource "kubernetes_namespace" "databases" {
+  metadata {
+    annotations = {
+      name = local.namespace
+    }
+    name = local.namespace
+  }
+}
+
 resource "kubernetes_secret" "redis_secret" {
   metadata {
     name      = "redis-secret"
@@ -25,4 +34,7 @@ resource "kubernetes_secret" "redis_secret" {
   }
 
   type = "kubernetes.io/opaque"
+  depends_on = [
+    kubernetes_namespace.databases
+  ]
 }
