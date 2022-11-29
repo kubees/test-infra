@@ -15,3 +15,8 @@ variable "playlist_microservice_image_digest" {
   #   default = "9fc8eb93934164163584b41c019738da9fcefaf09223e1494679d00869759ea2"
   description = "This is the Docker image digest of the playlist microservice"
 }
+
+variable "wait" {
+  type        = true
+  description = "Wait for realses to be successful or not."
+}
