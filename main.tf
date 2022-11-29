@@ -14,6 +14,7 @@ module "microservices" {
   depends_on = [
     module.redis
   ]
+  wait = var.wait
 }
 
 module "frontend" {
@@ -22,4 +23,5 @@ module "frontend" {
   depends_on = [
     module.microservices
   ]
+  wait = var.wait
 }
