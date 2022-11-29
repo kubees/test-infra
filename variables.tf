@@ -17,6 +17,7 @@ variable "playlist_microservice_image_digest" {
 }
 
 variable "wait" {
-  type        = true
+  type        = bool
   description = "Wait for realses to be successful or not."
+  default     = true
 }
