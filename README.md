@@ -18,7 +18,7 @@ No providers.
 | <a name="input_frontend_image_digest"></a> [frontend\_image\_digest](#input\_frontend\_image\_digest) | This is the Docker image digest of the frontend application | `string` | n/a | yes |
 | <a name="input_playlist_microservice_image_digest"></a> [playlist\_microservice\_image\_digest](#input\_playlist\_microservice\_image\_digest) | This is the Docker image digest of the playlist microservice | `string` | n/a | yes |
 | <a name="input_videos_microservice_image_digest"></a> [videos\_microservice\_image\_digest](#input\_videos\_microservice\_image\_digest) | This is the Docker image digest of the videos microservice | `string` | n/a | yes |
-| <a name="input_wait"></a> [wait](#input\_wait) | Wait for realses to be successful or not. | `true` | n/a | yes |
+| <a name="input_wait"></a> [wait](#input\_wait) | Wait for realses to be successful or not. | `bool` | `true` | no |
 ## Outputs
 
 No outputs.
