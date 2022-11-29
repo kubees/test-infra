@@ -21,5 +21,13 @@ resource "helm_release" "frontend_release" {
     name  = "deployment.container.memoryRequest"
     value = "75Mi"
   }
+  set {
+    name  = "deployment.container.cpuRequest"
+    value = "75m"
+  }
+  set {
+    name  = "deployment.container.cpuLimit"
+    value = "100m"
+  }
   wait = var.wait
 }

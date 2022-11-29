@@ -26,6 +26,14 @@ resource "helm_release" "videos_microservice_release" {
     name  = "microservices-umbrella-chart.deployment.container.memoryRequest"
     value = "75Mi"
   }
+  set {
+    name  = "microservices-umbrella-chart.deployment.container.cpuRequest"
+    value = "75m"
+  }
+  set {
+    name  = "microservices-umbrella-chart.deployment.container.cpuLimit"
+    value = "100m"
+  }
   wait = var.wait
 }
 
@@ -70,6 +78,14 @@ resource "helm_release" "playlist_microservice_release" {
   set {
     name  = "microservices-umbrella-chart.deployment.container.memoryRequest"
     value = "75Mi"
+  }
+  set {
+    name  = "microservices-umbrella-chart.deployment.container.cpuRequest"
+    value = "75m"
+  }
+  set {
+    name  = "microservices-umbrella-chart.deployment.container.cpuLimit"
+    value = "100m"
   }
   wait = var.wait
 }
