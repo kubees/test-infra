@@ -13,4 +13,5 @@ resource "helm_release" "videos_microservice_release" {
     name  = "deployment.container.digest"
     value = var.frontend_image_digest
   }
+  wait = false
 }
