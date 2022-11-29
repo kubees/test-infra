@@ -7,7 +7,7 @@ nodes:
         kind: InitConfiguration
         nodeRegistration:
           kubeletExtraArgs:
-            system-reserved: memory=2518Mi,cpu=2150m
+            system-reserved: memory=2518Mi
     # add a mount from /path/to/my/files on the host to /files on the node
     extraMounts:
       - hostPath: /kubernetes-persistent-volume/redis
