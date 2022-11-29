@@ -13,5 +13,13 @@ resource "helm_release" "frontend_release" {
     name  = "deployment.container.digest"
     value = var.frontend_image_digest
   }
+  set {
+    name  = "deployment.container.memoryLimit"
+    value = "100Mi"
+  }
+  set {
+    name  = "deployment.container.memoryRequest"
+    value = "75Mi"
+  }
   wait = var.wait
 }
