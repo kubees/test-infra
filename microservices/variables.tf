@@ -10,3 +10,7 @@ variable "videos_microservice_image_digest" {
 variable "playlist_microservice_image_digest" {
   type = string
 }
+
+variable "wait" {
+  type = bool
+}

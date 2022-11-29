@@ -1,7 +1,7 @@
 locals {
   namespace = "frontend"
 }
-resource "helm_release" "videos_microservice_release" {
+resource "helm_release" "frontend_release" {
   name              = "frontend"
   chart             = "webapp-helm-chart"
   repository        = "${path.module}/webapp-helm-chart"
@@ -13,4 +13,5 @@ resource "helm_release" "videos_microservice_release" {
     name  = "deployment.container.digest"
     value = var.frontend_image_digest
   }
+  wait = var.wait
 }

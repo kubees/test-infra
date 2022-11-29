@@ -1,7 +1,6 @@
 <!-- BEGIN_TF_DOCS -->
 # Test Infra
 This is the test infrastructure written in Terraform, used to test e2e kubernetes cluster with our applications.
-
 ---
 ## Usage
 ## Requirements
@@ -19,6 +18,7 @@ No providers.
 | <a name="input_frontend_image_digest"></a> [frontend\_image\_digest](#input\_frontend\_image\_digest) | This is the Docker image digest of the frontend application | `string` | n/a | yes |
 | <a name="input_playlist_microservice_image_digest"></a> [playlist\_microservice\_image\_digest](#input\_playlist\_microservice\_image\_digest) | This is the Docker image digest of the playlist microservice | `string` | n/a | yes |
 | <a name="input_videos_microservice_image_digest"></a> [videos\_microservice\_image\_digest](#input\_videos\_microservice\_image\_digest) | This is the Docker image digest of the videos microservice | `string` | n/a | yes |
+| <a name="input_wait"></a> [wait](#input\_wait) | Wait for realses to be successful or not. | `true` | n/a | yes |
 ## Outputs
 
 No outputs.
