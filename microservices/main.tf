@@ -18,7 +18,6 @@ resource "helm_release" "videos_microservice_release" {
     name  = "microservices-umbrella-chart.monitoring.enabled"
     value = false
   }
-  wait = false
 }
 
 resource "kubernetes_secret" "videos_redis_secret" {
@@ -55,7 +54,6 @@ resource "helm_release" "playlist_microservice_release" {
     name  = "microservices-umbrella-chart.monitoring.enabled"
     value = false
   }
-  wait = false
 }
 
 resource "kubernetes_secret" "playlist_redis_secret" {

@@ -15,7 +15,6 @@ resource "helm_release" "redis_release" {
     name  = "redis.metrics.enabled"
     value = false
   }
-  wait = false
 }
 
 resource "kubernetes_namespace" "databases" {
